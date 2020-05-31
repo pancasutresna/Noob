@@ -1,4 +1,8 @@
+#include "nbpch.h"
 #include "Application.h"
+
+#include "Noob/Events/ApplicationEvent.h"
+#include "Noob/Log.h"
 
 namespace Noob {
 
@@ -12,6 +16,9 @@ namespace Noob {
 
 	void Application::Run()
 	{
+		WindowResizeEvent e(1200, 720);
+		NB_TRACE(e);
+
 		while (true);
 	}
 

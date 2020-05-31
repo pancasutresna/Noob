@@ -18,6 +18,9 @@ workspace "Noob"
         targetdir  ("bin/" .. outputdir .. "/%{prj.name}")
         objdir  ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+        pchheader "nbpch.h"
+        pchsource "Noob/src/nbpch.cpp"
+
         files
         {
             "%{prj.name}/src/**.h",
@@ -26,6 +29,7 @@ workspace "Noob"
 
         includedirs
         {
+            "%{prj.name}/src",
             "%{prj.name}/vendor/spdlog/include"
         }
 
