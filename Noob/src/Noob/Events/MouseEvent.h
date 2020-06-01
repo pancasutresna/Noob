@@ -75,9 +75,9 @@ namespace Noob {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class NOOB_API MouseButtonReleaseEvent : public MouseButtonEvent {
+	class NOOB_API MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
-		MouseButtonReleaseEvent(int button) : MouseButtonEvent(button) {
+		MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) {
 		}
 
 		std::string ToString() const override {

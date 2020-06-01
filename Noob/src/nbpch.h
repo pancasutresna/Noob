@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Noob/Log.h"
+
 #ifdef NB_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif // NB_PLATFORM_WINDOWS
