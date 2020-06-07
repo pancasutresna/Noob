@@ -13,8 +13,10 @@ workspace "Noob"
     -- Include directories relative to root folder (solution directory)
     IncludeDir = {}
     IncludeDir["GLFW"] = "Noob/vendor/GLFW/include"
+    IncludeDir["Glad"] = "Noob/vendor/Glad/include"
 
     include "Noob/vendor/GLFW"
+    include "Noob/vendor/Glad"
 
     project "Noob"
         location "Noob"
@@ -37,11 +39,13 @@ workspace "Noob"
         {
             "%{prj.name}/src",
             "%{prj.name}/vendor/spdlog/include",
-            "%{IncludeDir.GLFW}"
+            "%{IncludeDir.GLFW}",
+            "%{IncludeDir.Glad}"
         }
 
         links{
             "GLFW",
+            "Glad",
             "opengl32.lib"
         }
 
@@ -53,7 +57,8 @@ workspace "Noob"
             defines 
             {
                 "NB_PLATFORM_WINDOWS",
-                "NB_BUILD_DLL"
+                "NB_BUILD_DLL",
+                "GLFW_INCLUDE_NONE"
             }
 
             postbuildcommands
